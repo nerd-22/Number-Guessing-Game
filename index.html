@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guessing Game</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="game-container">
+    <h1><i class="fas fa-dice"></i> Number Guessing Game</h1>
+
+    <div class="settings">
+      <label for="difficulty"><i class="fas fa-tachometer-alt"></i> Difficulty:</label>
+      <select id="difficulty">
+        <option value="10">Easy (1–10)</option>
+        <option value="50">Medium (1–50)</option>
+        <option value="100">Hard (1–100)</option>
+      </select>
+      <button id="start-btn" class="btn"><i class="fas fa-play"></i> Start Game</button>
+    </div>
+
+    <div class="game-area hidden">
+      <p class="info-text">Guess the number between <span id="range-info"></span></p>
+
+      <div class="input-section">
+        <input type="number" id="guess-input" placeholder="Enter your guess" />
+        <button id="guess-btn" class="btn"><i class="fas fa-check"></i> Guess</button>
+      </div>
+
+      <p id="feedback" class="feedback"></p>
+
+      <div class="stats">
+        <p><i class="fas fa-bolt"></i> Attempts: <span id="attempts">0</span></p>
+        <p><i class="fas fa-trophy"></i> Score: <span id="score">0</span></p>
+      </div>
+
+      <button id="hint-btn" class="btn secondary"><i class="fas fa-lightbulb"></i> Hint</button>
+      <button id="restart-btn" class="btn danger hidden"><i class="fas fa-redo"></i> Restart</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by <strong>Alvin Duo (Nerd-22)</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
